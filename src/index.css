@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+	background: linear-gradient(
+		92.23deg,
+		#3e9065 21.43%,
+		#72b56a 50.63%,
+		#b0d86d 100%,
+		#f9f871 117.04%
+	);
+	box-shadow: 0px 4.42184px 107.23px #56ff6482;
+}
+
+.btn:hover {
+	background: linear-gradient(
+		92.23deg,
+		#e0df66 21.43%,
+		#b0d86d 50.63%,
+		#72b56a 100%,
+		#3e9065 117.04%
+	);
+}
+
+.gradient,
+.active {
+	background: linear-gradient(
+		92.23deg,
+		#3e9065 21.43%,
+		#72b56a 50.63%,
+		#b0d86d 100%,
+		#f9f871 117.04%
+	);
+}
+
+.active {
+	color: #fff;
+	padding: 1rem;
+	border-radius: 100%;
+}
+
+.background {
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		90deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(0, 70, 67, 1) 35%,
+		rgba(12, 22, 24, 1) 100%
+	);
+}
+
+.slick-slide > div {
+	margin: 0 30px;
+}
+.slick-slide > div:nth-child(1) {
+	margin-left: 0;
+}
+.slick-list {
+	margin-right: -30px;
+}
+
+.noSelect {
+	-webkit-tap-highlight-color: transparent;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.noSelect:focus {
+	outline: none !important;
+}
+
+@layer base {
+	body {
+		@apply font-secondary text-lg leading-8 text-white;
+	}
+	.h2 {
+		@apply font-primary text-[32px] mb-6 tracking-[10%] uppercase;
+	}
+	.h3 {
+		@apply font-primary font-semibold text-[26px] mb-6 leading-[46px];
+	}
+	.btn {
+		@apply rounded-full font-primary text-white font-medium;
+	}
+	.btn-sm {
+		@apply h-[48px] px-6 text-sm;
+	}
+	.btn-lg {
+		@apply h-[56px] px-10 text-base;
+	}
+	.btn-link {
+		@apply text-base;
+	}
+	.text-gradient {
+		@apply bg-gradient-to-r text-transparent bg-clip-text from-[#72b56a] to-[#f9f871] font-bold font-primary hover:from-[#f9f871] hover:to-[#72b56a];
+	}
+	.section {
+		@apply py-8 lg:py-24 lg:h-screen flex items-center;
+	}
+}
